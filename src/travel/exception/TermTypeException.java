@@ -1,6 +1,6 @@
 package travel.exception;
 
-public class TermTypeException extends Throwable {
+public class TermTypeException extends Exception {
     private String message;
 
     public TermTypeException(String message)

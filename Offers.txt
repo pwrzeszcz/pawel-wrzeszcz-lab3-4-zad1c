@@ -1,6 +1,12 @@
 Country: Poland
 City: Kaniow
+Hotel: Test
+Price: 1000.0
+Term: autumn
+
+Country: Czech
+City: Prague
 Hotel: test
-Price: 1200.0
+Price: 1800.0
 Term: summer
 
