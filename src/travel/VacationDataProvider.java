@@ -1,6 +1,7 @@
 package travel;
 
 import travel.exception.RoomTypeException;
+import travel.exception.TermTypeException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,7 @@ public class VacationDataProvider
     private Scanner scanner = new Scanner(System.in);
     private List<Vacation> offers = new ArrayList<>();
 
-    public List<Vacation> getData() throws RoomTypeException
+    public List<Vacation> getData() throws RoomTypeException, TermTypeException
     {
         String userAnswer;
 
@@ -48,7 +49,7 @@ public class VacationDataProvider
             }
             catch (IllegalArgumentException e)
             {
-                throw new RoomTypeException("Unknown term type provided");
+                throw new TermTypeException("Unknown term type provided");
             }
 
             offers.add(offer);
