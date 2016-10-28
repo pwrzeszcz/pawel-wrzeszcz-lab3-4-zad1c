@@ -2,8 +2,8 @@ package travel;
 
 public enum Term
 {
-    Winter,
-    Autumn,
-    Spring,
-    Summer
+    winter,
+    autumn,
+    spring,
+    summer
 }
