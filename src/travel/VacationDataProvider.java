@@ -18,21 +18,26 @@ public class VacationDataProvider
 
         while(true)
         {
-            Vacation offer = new Vacation();
+            String country;
+            String city;
+            String hotelName;
+            double baseRoomPrice;
+            Room room;
+            Term term;
 
             System.out.println("Type country name:");
-            offer.setCountry(scanner.nextLine());
+            country = scanner.nextLine();
 
             System.out.println("Type city name:");
-            offer.setCity(scanner.nextLine());
+            city = scanner.nextLine();
 
             System.out.println("Type hotel name:");
-            offer.setHotelName(scanner.nextLine());
+            hotelName = scanner.nextLine();
 
             System.out.println("Type room type (Standard, Exclusive):");
             try
             {
-                offer.setRoom(Room.valueOf(scanner.nextLine().toLowerCase()));
+                room = Room.valueOf(scanner.nextLine().toLowerCase());
             }
             catch (IllegalArgumentException e)
             {
@@ -40,17 +45,19 @@ public class VacationDataProvider
             }
 
             System.out.println("Type base room price:");
-            offer.setBaseRoomPrice(Double.parseDouble(scanner.nextLine()));
+            baseRoomPrice = Double.parseDouble(scanner.nextLine());
 
             System.out.println("Type term (winter, autumn, spring, summer):");
             try
             {
-                offer.setTerm(Term.valueOf(scanner.nextLine().toLowerCase()));
+                term = Term.valueOf(scanner.nextLine().toLowerCase());
             }
             catch (IllegalArgumentException e)
             {
                 throw new TermTypeException("Unknown term type provided");
             }
+
+            Vacation offer = new Vacation(country, city, hotelName, baseRoomPrice, room, term);
 
             offers.add(offer);
 

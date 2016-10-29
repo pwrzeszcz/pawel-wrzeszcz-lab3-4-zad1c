@@ -6,7 +6,7 @@ public class VacationDataDisplayer
 {
     public void display(List<Vacation> offers)
     {
-        System.out.println("\nProvided offer details:\n");
+        System.out.println("\nProvided offers details:\n");
 
         for (Vacation offer: offers)
         {

@@ -9,6 +9,16 @@ public class Vacation
     private Room room;
     private Term term;
 
+    public Vacation(String country, String city, String hotelName, double baseRoomPrice, Room room, Term term)
+    {
+        this.country = country;
+        this.city = city;
+        this.hotelName = hotelName;
+        this.baseRoomPrice = baseRoomPrice;
+        this.room = room;
+        this.term = term;
+    }
+
     public double getPrice()
     {
         double priceFactor = getPriceFactor();
@@ -52,19 +62,9 @@ public class Vacation
         return country;
     }
 
-    public void setCountry(String country)
-    {
-        this.country = country;
-    }
-
     public String getCity()
     {
         return city;
-    }
-
-    public void setCity(String city)
-    {
-        this.city = city;
     }
 
     public String getHotelName()
@@ -72,19 +72,9 @@ public class Vacation
         return hotelName;
     }
 
-    public void setHotelName(String hotelName)
-    {
-        this.hotelName = hotelName;
-    }
-
     public double getBaseRoomPrice()
     {
         return baseRoomPrice;
-    }
-
-    public void setBaseRoomPrice(double baseRoomPrice)
-    {
-        this.baseRoomPrice = baseRoomPrice;
     }
 
     public Room getRoom()
@@ -92,18 +82,8 @@ public class Vacation
         return room;
     }
 
-    public void setRoom(Room room)
-    {
-        this.room = room;
-    }
-
     public Term getTerm()
     {
         return term;
-    }
-
-    public void setTerm(Term term)
-    {
-        this.term = term;
     }
 }
